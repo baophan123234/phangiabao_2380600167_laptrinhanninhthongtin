@@ -9,8 +9,7 @@
 ## PHẦN 1: STATIC ANALYSIS SECURITY TESTING (SAST-TOOL)
 
 ### 1. Cài đặt các thư viện phụ thuộc cho SAST
-<!-- GẮN ẢNH 01 VÀO DƯỚI ĐÂY (thay đổi tên file ảnh nếu cần): -->
-![Ảnh 01: Cài đặt thư viện SAST](anh/01_sast_install.png)
+![Ảnh 01: Cài đặt thư viện SAST](image.png)
 
 - **Lệnh thực hiện**: `pip install -r .\requirements.txt` (trong thư mục `sast-tool`)
 - **Giải thích**: Cài đặt các thư viện phục vụ phân tích mã nguồn tĩnh:
@@ -21,8 +20,7 @@
 ---
 
 ### 2. Chạy Unit Test kiểm thử các thành phần SAST
-<!-- GẮN ẢNH 02 VÀO DƯỚI ĐÂY: -->
-![Ảnh 02: Unit Test SAST](anh/02_sast_unittest.png)
+![Ảnh 02: Unit Test SAST](image-1.png)
 
 - **Lệnh thực hiện**: `python -m unittest discover tests` (trong thư mục `sast-tool`)
 - **Giải thích**: Kiểm thử tự động toàn bộ 5 module chức năng: `ASTAnalyzer`, `VulnPatternMatcher`, `SecurityRuleEngine`, `CodeQualityChecker` và `SarifReporter`. Kết quả `Ran 6 tests ... OK` chứng minh công cụ kiểm thử tĩnh hoạt động chính xác theo logic thiết kế, sẵn sàng quét mã nguồn.
@@ -30,8 +28,7 @@
 ---
 
 ### 3. Quét tĩnh phát hiện lỗ hổng trên file `vulnerable_01.py`
-<!-- GẮN ẢNH 03 VÀO DƯỚI ĐÂY: -->
-![Ảnh 03: Quét file vulnerable_01.py](anh/03_sast_scan_vulnerable_01.png)
+![Ảnh 03: Quét file vulnerable_01.py](image-2.png)
 
 - **Lệnh thực hiện**: `python -m sast_tool.main .\examples\vulnerable_01.py`
 - **Giải thích**: Công cụ tự động phân tích và phát hiện chính xác **8 vấn đề** (8 issues) lưu vào file `report.sarif`:
@@ -42,8 +39,7 @@
 ---
 
 ### 4. Báo cáo trực quan bằng Extension SARIF Viewer trên VS Code
-<!-- GẮN ẢNH 04 VÀO DƯỚI ĐÂY: -->
-![Ảnh 04: Giao diện SARIF Viewer](anh/04_sast_sarif_viewer.png)
+![Ảnh 04: Giao diện SARIF Viewer](image-3.png)
 
 - **Thao tác thực hiện**: Cài đặt extension **SARIF Viewer** (Microsoft DevLabs) trên VS Code và mở file `report.sarif`.
 - **Giải thích**: Giao diện tab **SARIF Results** trực quan hóa toàn bộ 8 cảnh báo, phân loại mức độ nghiêm trọng (Warning, Error, Note), hiển thị chính xác vị trí số dòng, số cột của lỗi và thông điệp hướng dẫn giúp lập trình viên nhanh chóng định vị và khắc phục lỗ hổng.
@@ -51,8 +47,7 @@
 ---
 
 ### 5. Quét tĩnh phát hiện lỗ hổng trên file `vulnerable_02.py`
-<!-- GẮN ẢNH 05 VÀO DƯỚI ĐÂY: -->
-![Ảnh 05: Quét file vulnerable_02.py](anh/05_sast_scan_vulnerable_02.png)
+![Ảnh 05: Quét file vulnerable_02.py](image-4.png)
 
 - **Lệnh thực hiện**: `python -m sast_tool.main .\examples\vulnerable_02.py`
 - **Giải thích**: Kiểm tra tính mở rộng của công cụ trên một mã nguồn khác. Kết quả phát hiện chính xác **4 vấn đề** (4 issues): 1 lỗ hổng bảo mật nghiêm trọng do sử dụng hàm `eval(user_input)` nhận dữ liệu trực tiếp từ người dùng mà không kiểm duyệt đầu vào (nguy cơ RCE) và 3 vi phạm định dạng mã nguồn Flake8.
@@ -60,8 +55,7 @@
 ---
 
 ### 6. Quản lý phiên bản mã nguồn SAST với Git Commit
-<!-- GẮN ẢNH 06 VÀO DƯỚI ĐÂY: -->
-![Ảnh 06: Commit Git cho SAST Tool](anh/06_sast_git_commit.png)
+![Ảnh 06: Commit Git cho SAST Tool](image-5.png)
 
 - **Lệnh thực hiện**:
   ```powershell
@@ -75,8 +69,7 @@
 ## PHẦN 2: DYNAMIC ANALYSIS SECURITY TESTING (DAST-TOOL)
 
 ### 7. Cài đặt các thư viện phụ thuộc cho DAST
-<!-- GẮN ẢNH 07 VÀO DƯỚI ĐÂY: -->
-![Ảnh 07: Cài đặt thư viện DAST](anh/07_dast_install.png)
+![Ảnh 07: Cài đặt thư viện DAST](image-6.png)
 
 - **Lệnh thực hiện**: `pip install -r .\requirements.txt` (trong thư mục `dast-tool`)
 - **Giải thích**: Cài đặt các thư viện phục vụ giám sát thời gian thực:
@@ -86,8 +79,7 @@
 ---
 
 ### 8. Chạy Unit Test kiểm thử các thành phần DAST
-<!-- GẮN ẢNH 08 VÀO DƯỚI ĐÂY: -->
-![Ảnh 08: Unit Test DAST](anh/08_dast_unittest.png)
+![Ảnh 08: Unit Test DAST](image-7.png)
 
 - **Lệnh thực hiện**: `python -m unittest discover -s tests` (trong thư mục `dast-tool`)
 - **Giải thích**: Kiểm tra tự động 5 thành phần cốt lõi của DAST: giám sát CPU/RAM (`RuntimeMonitor`), phát hiện tràn số nguyên (`MemoryAnalyzer`), thống kê mạng (`NetworkTrafficAnalyzer`), phát hiện lệnh gọi nguy hiểm (`SecurityBehaviorChecker`) và thực thi an toàn trong môi trường ảo (`VirtualSandbox`). Toàn bộ 5/5 tests đều vượt qua (`OK`).
@@ -95,8 +87,7 @@
 ---
 
 ### 9. Thực thi chương trình giám sát động toàn diện `main.py`
-<!-- GẮN ẢNH 09 VÀO DƯỚI ĐÂY: -->
-![Ảnh 09: Chạy kiểm thử động main.py](anh/09_dast_run_main.png)
+![Ảnh 09: Chạy kiểm thử động main.py](image-8.png)
 
 - **Lệnh thực hiện**: `python .\main.py` (trong thư mục `dast-tool`)
 - **Giải thích**: Theo dõi hành vi ứng dụng thực tế trong lúc chạy:
@@ -110,8 +101,7 @@
 ---
 
 ### 10. Khởi chạy máy chủ giám sát Flask API Server
-<!-- GẮN ẢNH 10 VÀO DƯỚI ĐÂY: -->
-![Ảnh 10: Khởi chạy Flask Server](anh/10_dast_flask_app.png)
+![Ảnh 10: Khởi chạy Flask Server](image-9.png)
 
 - **Lệnh thực hiện**: `python .\app.py` (trong thư mục `dast-tool`)
 - **Giải thích**: Khởi tạo dịch vụ nền tảng DAST dưới dạng Web Service chạy tại cổng 5000 (`http://127.0.0.1:5000`), đóng vai trò như một Security Agent sẵn sàng tiếp nhận các yêu cầu truy vấn giám sát hoặc điều khiển thực thi từ xa.
@@ -119,8 +109,7 @@
 ---
 
 ### 11. Kiểm tra kết quả phản hồi của các RESTful API Endpoints
-<!-- GẮN ẢNH 11 VÀO DƯỚI ĐÂY: -->
-![Ảnh 11: Kết quả truy vấn API DAST](anh/11_dast_api_endpoints.png)
+![Ảnh 11: Kết quả truy vấn API DAST](image-10.png)
 
 - **Lệnh thực hiện**: `python .\test_api.py` (trong thư mục `dast-tool`)
 - **Giải thích**: Kiểm tra sự hoạt động của cả 5 endpoint, tất cả đều trả về mã trạng thái **HTTP 200 (OK)** với dữ liệu định dạng JSON chuẩn:
@@ -133,8 +122,7 @@
 ---
 
 ### 12. Quản lý phiên bản mã nguồn DAST với Git Commit
-<!-- GẮN ẢNH 12 VÀO DƯỚI ĐÂY: -->
-![Ảnh 12: Commit Git cho DAST Tool](anh/12_dast_git_commit.png)
+![Ảnh 12: Commit Git cho DAST Tool](image-11.png)
 
 - **Lệnh thực hiện**:
   ```powershell
