@@ -1,0 +1,9 @@
+# BƯỚC 2: Thêm job build trang web Docusaurus và lưu artifacts
+build-job:
+  image: node
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - "build/"

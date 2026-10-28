@@ -1,0 +1,5 @@
+# BƯỚC 1: Pipeline đơn giản ban đầu để kiểm tra runner
+test-job:
+  script:
+    - echo "This is my first job!"
+    - date
