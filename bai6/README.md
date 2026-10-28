@@ -12,7 +12,7 @@
 
 ![Hình 2.1](images/hinh_2_1_gitlab_ci_yml.png)
 
-**👉 Giải thích chi tiết Hình 2.1:**
+**Giải thích Hình 2.1:**
 
 - Hình ảnh hiển thị tệp cấu hình `.gitlab-ci.yml` được tạo tại thư mục gốc của repository `baophan-lab / lab06-cicd-basic`.
 - Pipeline gồm 4 công việc (jobs) được phân bổ vào 3 giai đoạn (stages):
@@ -27,7 +27,7 @@
 
 ![Hình 2.2](images/hinh_2_2_pipeline_list.png)
 
-**👉 Giải thích chi tiết Hình 2.2:**
+**Giải thích Hình 2.2:**
 
 - Giao diện **Build > Pipelines** hiển thị danh sách các pipeline được kích hoạt trong dự án.
 - Pipeline `#2997028872` được kích hoạt bởi commit `Add .gitlab-ci.yml` của người dùng **Bảo Phan** trên nhánh **main**.
@@ -40,7 +40,7 @@
 
 ![Hình 2.3](images/hinh_2_3_pipeline_graph.png)
 
-**👉 Giải thích chi tiết Hình 2.3:**
+**Giải thích Hình 2.3:**
 
 - Khi bấm vào mã số Pipeline `#2997028872`, hệ thống mở ra sơ đồ trực quan (Pipeline Graph) minh họa rõ luồng thực thi:
   - **Cột 1 (Build):** Chứa `build-job` chạy đầu tiên để chuẩn bị gói phần mềm.
@@ -54,7 +54,7 @@
 
 ![Hình 2.4](images/hinh_2_4_job_deploy_prod_log.png)
 
-**👉 Giải thích chi tiết Hình 2.4:**
+**Giải thích Hình 2.4:**
 
 - Log terminal chi tiết khi nhấp vào job `deploy-prod` trong giai đoạn triển khai:
   - Runner ghi nhận phiên bản `gitlab-runner 19.5.1` chạy trên môi trường `Windows-Local-Runner`.
@@ -70,7 +70,7 @@
 
 ![Hình 3.1](images/hinh_3_1_docusaurus_repo.png)
 
-**👉 Giải thích chi tiết Hình 3.1:**
+**Giải thích Hình 3.1:**
 
 - Hình ảnh hiển thị cấu trúc repository `baophan-lab / my-pipeline-tutorial-project` sau khi khởi tạo và đưa mã nguồn Docusaurus lên thư mục gốc:
   - Thư mục `blog/`, `docs/`, `src/`, `static/`: Chứa các bài viết, tài liệu, mã nguồn giao diện React và tài nguyên tĩnh.
@@ -84,7 +84,7 @@
 
 ![Hình 3.2](images/hinh_3_2_job_test_log.png)
 
-**👉 Giải thích chi tiết Hình 3.2:**
+**Giải thích Hình 3.2:**
 
 - Minh chứng thực thi bước đầu tiên của Bài 6.2.2 nhằm đảm bảo runner đã sẵn sàng nhận việc:
   - Lệnh `echo "This is my first job!"` xuất thông điệp chào mừng chuẩn xác.
@@ -97,7 +97,7 @@
 
 ![Hình 3.3](images/hinh_3_3_job_build_artifacts.png)
 
-**👉 Giải thích chi tiết Hình 3.3:**
+**Giải thích Hình 3.3:**
 
 - Job `build-job` sử dụng môi trường Node.js để biên dịch dự án:
   - Lệnh `npm install` hoàn tất cài đặt 1295 packages phụ thuộc.
@@ -110,7 +110,7 @@
 
 ![Hình 3.4](images/hinh_3_4_pipeline_2_stages.png)
 
-**👉 Giải thích chi tiết Hình 3.4:**
+**Giải thích Hình 3.4:**
 
 - Sơ đồ Pipeline ở giai đoạn 3 hoàn chỉnh với 2 giai đoạn:
   - **Stage 1 (Build):** Thực hiện biên dịch mã nguồn qua `build-job`.
@@ -123,7 +123,7 @@
 
 ![Hình 3.5](images/hinh_3_5_gitlab_pages_deploy.png)
 
-**👉 Giải thích chi tiết Hình 3.5:**
+**Giải thích Hình 3.5:**
 
 - Truy cập vào mục **Deploy > Pages** trên thanh menu bên trái dự án:
   - Hệ thống xác nhận trạng thái **`Active`** với thông báo chúc mừng _"Congratulations! Your pages are served under"_.
@@ -137,7 +137,7 @@
 
 ![Hình 3.6](images/hinh_3_6_docusaurus_website.png)
 
-**👉 Giải thích chi tiết Hình 3.6:**
+**Giải thích Hình 3.6:**
 
 - Ảnh chụp màn hình website Docusaurus hoạt động thực tế trên trình duyệt web:
   - Thanh tiêu đề hiển thị trang **My Site - Dinosaurs are cool**.
